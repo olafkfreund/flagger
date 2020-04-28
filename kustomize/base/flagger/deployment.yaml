@@ -20,7 +20,7 @@ spec:
       serviceAccountName: flagger
       containers:
       - name: flagger
-        image: weaveworks/flagger:0.21.0
+        image: olaffreund/flagger-arm64:latest
         imagePullPolicy: IfNotPresent
         ports:
         - name: http

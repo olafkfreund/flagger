@@ -3,7 +3,7 @@ VERSION?=$(shell grep 'VERSION' pkg/version/version.go | awk '{ print $$4 }' | t
 LT_VERSION?=$(shell grep 'VERSION' cmd/loadtester/main.go | awk '{ print $$4 }' | tr -d '"' | head -n1)
 
 build:
-	GIT_COMMIT=$$(git rev-list -1 HEAD) && CGO_ENABLED=0 GOOS=linux go build  \
+	GIT_COMMIT=$$(git rev-list -1 HEAD) && CGO_ENABLED=0 GOOS=linux GOARCH=arm64 GOARM=7 go build  \
 		-ldflags "-s -w -X github.com/weaveworks/flagger/pkg/version.REVISION=$${GIT_COMMIT}" \
 		-a -installsuffix cgo -o ./bin/flagger ./cmd/flagger/*
 	docker build -t weaveworks/flagger:$(TAG) . -f Dockerfile

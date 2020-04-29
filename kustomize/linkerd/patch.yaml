@@ -12,8 +12,8 @@ spec:
             - -mesh-provider=linkerd
             - -metrics-server=http://linkerd-prometheus:9090
             - -slack-user=flagger
-            - -slack-channel=
-            - -slack-url=
+            - -slack-channel=flagger
+            - -slack-url=https://hooks.slack.com/services/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
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding

@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: olaffreund/podinfo:3.2.1
+        image: olaffreund/podinfo:latest
         imagePullPolicy: IfNotPresent
         ports:
         - name: http

@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: loadtester
-          image: olaffreund/flagger-loadtester:0.16.0
+          image: olaffreund/flagger-loadtester:arm64
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
